@@ -6,4 +6,4 @@ def index(request):
     user = request.user
     if user.is_superuser:
         return render(request, 'index.html')
-    return render(request, 'login.html')
+    return render(request, 'index.html')
