@@ -57,9 +57,9 @@
 
                                         <input type="submit" value='Zaloguj' class="btn btn-primary btn-user btn-block" >
                                         {% csrf_token %}
-                                        {%  if message %}
+                                        {%  for message in messages %}
                                         <p> {{  message }}</p>
-                                        {% endif %}
+                                        {% endfor %}
 
 
                                         <hr>
