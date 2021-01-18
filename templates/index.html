@@ -15,9 +15,6 @@
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
-{#<link#}
-{#        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"#}
-{#        rel="stylesheet">#}
 
     <!-- Custom styles for this template-->
     <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
@@ -47,7 +44,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{%  url 'home' %}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Home</span></a>
+                    <span> Strona główna </span></a>
             </li>
 
 
@@ -60,14 +57,14 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="{%  url 'login' %}">Login</a>
-                        <a class="collapse-item" href="{% url 'password_change' %}">Change password</a>
-                        <a class="collapse-item" href="registration/password_change_form.html">Forgot Password</a>
+                        <h6 class="collapse-header">Użytkownik:</h6>
+                        <a class="collapse-item" href="{%  url 'login' %}">Zaloguj</a>
+                        <a class="collapse-item" href="{% url 'password_change' %}">Zmień hasło</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Pozostałe:</h6>
+                        <a class="collapse-item" href="{% url 'error_page' %}">Błąd strony</a>
+                        <a class="collapse-item" href="{% url 'table_page' %}">Tabele</a>
+
                     </div>
                 </div>
             </li>
@@ -80,8 +77,20 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+            <li class="nav-item">
+                <a class="nav-link">
+                <span>Search Up
+                    <br>Copyright Jenny&copy;</span></a>
+            </li>
+
         </ul>
         <!-- End of Sidebar -->
+
+
+
+
+
+
 
 
         <!-- Content Wrapper -->
@@ -135,7 +144,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{% url 'error_page' %}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -144,7 +153,7 @@
                                     Zmień hasło
 
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{% url 'error_page' %}">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
@@ -163,14 +172,16 @@
                 <!-- End of Topbar -->
 
 
+{% block content %} {% endblock %}
+
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright Jenny&copy; Your Search Up 2021</span>
-                    </div>
-                </div>
-            </footer>
+{#            <footer class="sticky-footer bg-white">#}
+{#                <div class="container my-auto">#}
+{#                    <div class="copyright text-center my-auto">#}
+{#                        <span>Copyright Jenny&copy; Your Search Up 2021</span>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </footer>#}
             <!-- End of Footer -->
 
         </div>
@@ -190,12 +201,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Opuszczasz aplikację?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Opuszczasz aplikację</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Czy na pewno chcesz się wylogować.</div>
+                <div class="modal-body">Czy na pewno chcesz się wylogować?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Anuluj</button>
                     <a class="btn btn-primary" href="{% url 'logout' %}">Wyloguj</a>

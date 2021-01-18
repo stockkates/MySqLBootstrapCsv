@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.contrib.auth import logout
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path, include
-from search_up.views import home, mylogin, password_change, mylogout
+from search_up.views import home, mylogin, password_change, mylogout, table_page, error_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,7 @@ urlpatterns = [
     path('account/password_change/', password_change, name='password_change'),
 
     path('home/', home, name='home'),
+    path('table_page/', table_page, name='table_page'),
+    path('error_page/', error_page, name='error_page'),
+
 ]

@@ -23,6 +23,14 @@ def index(request):
 def home(request):
     return render(request, 'index.html')
 
+@login_required
+def error_page(request):
+    return render(request, '404.html')
+
+@login_required
+def table_page(request):
+    return render(request, 'tables.html')
+
 def mylogin(request):
     if request.method == "POST":
         username = request.POST.get('username')
