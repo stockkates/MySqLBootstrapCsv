@@ -1,3 +1,4 @@
+
 """
 Django settings for MySqLBootstrapCsv project.
 
@@ -79,9 +80,9 @@ WSGI_APPLICATION = 'MySqLBootstrapCsv.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb2',
+        'NAME': 'mydb',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'ko54YK66',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -128,7 +129,7 @@ STATIC_ROOT = ''
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / '/home/jenny/GitHub_projects/MySqLBootstrapCsv/static/',
+    BASE_DIR / '/home/jenny/PycharmProjects/MySqLBootstrapCsv-main/static/',
 # '/search_up/static/',
 # '/home/jenny/GitHub_projects/MySqLBootstrapCsv/static',
 #     '
