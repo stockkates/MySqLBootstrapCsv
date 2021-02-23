@@ -2,15 +2,8 @@ from django.contrib.auth import authenticate, login, update_session_auth_hash, l
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
-from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, redirect
-
-
-# Create your views here.
 from django.urls import reverse_lazy
-from django.views import View
 
 
 def index(request):
@@ -43,6 +36,7 @@ def mylogin(request):
             messages.info(request, "Błąd logowania. Spróbuj ponownie.")
     return render(request, 'registration/login.html')
 
+@login_required
 def mylogout(request):
     logout(request)
     return redirect("home")
@@ -61,44 +55,6 @@ def password_change(request):
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'registration/password_change_form.html', {'form': form})
-
-    # if request.method == 'POST':
-    #     form = PasswordChangeForm(data=request.POST, user=request.user)
-    #     if form.is_valid():
-    #         form.save()
-    #         return redirect('home')
-    #     return redirect('home')
-    #     # return render(request, 'registration/password_change_form.html', {'error_notice':error_notice})
-    #
-    # else:
-    #     form = PasswordChangeForm(data=request.POST, user=request.user)
-    #     context ={'form':form}
-    #     return render(request, 'registration/password_change_form.html', context)
-
-    # user = request.user
-    #
-    # if request.method == 'POST':
-    #     true_password = user.password
-    #
-    #     old_password = request.POST.get('old_password')
-    #     new_password1 = request.POST.get('new_password1')
-    #     new_password2 = request.POST.get('new_password2')
-    #
-    #     #form = PasswordChangeForm(data=request.POST, user=request.user)
-    #
-    #     if true_password==old_password:
-    #         if new_password1==new_password2:
-    #             user.password=new_password2
-    #             user.password.save()
-    #             return redirect(reverse_lazy('home'))
-    #         else:
-    #             error_notice = "Hasła nie są identyczne. Spróbuj ponownie."
-    #             return render(request, 'registration/password_change_form.html', {'error_notice': error_notice})
-    #     else:
-    #         error_notice = "Hasło nie pasuje. Spróbuj ponownie."
-    #         return render(request, 'registration/password_change_form.html', {'error_notice': error_notice})
-    # else:
-    #     return render(request, 'registration/password_change_form.html', {'user': user})
 
 
 

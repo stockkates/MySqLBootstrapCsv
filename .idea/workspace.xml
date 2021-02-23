@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcef43cb-bfe2-4729-9a25-ccc81f46471e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/search_up/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tables.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySqLBootstrapCsv/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySqLBootstrapCsv/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySqLBootstrapCsv/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MySqLBootstrapCsv/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_up/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_up/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/password_change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/MySQL_project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/GitHub_projects/MySqLBootstrapCsv" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
